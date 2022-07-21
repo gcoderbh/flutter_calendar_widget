@@ -250,7 +250,7 @@ class _FlutterCalendarState extends State<FlutterCalendar> {
             dowBuilder: (DateTime dateTime) {
               final String weekdayString = DateFormat.E(
                 _locale,
-              ).format(dateTime);
+              ).format(dateTime).substring(0, 1);
 
               return _calenderBuilder.buildDayOfWeek(dateTime, weekdayString);
             },
